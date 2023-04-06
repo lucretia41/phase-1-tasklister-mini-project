@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+  
+})
+
 const form = document.getElementById('create-task-form');
 const uList = document.getElementById('tasks');
 
@@ -15,6 +20,8 @@ function addTaskToList(eventObj) {
   btn.addEventListener('click', () => {
     listItem.remove();
   })
+//   add new functions here
+
 }
 
 form.addEventListener('submit', addTaskToList);
@@ -24,8 +31,5 @@ form.addEventListener('submit', addTaskToList);
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
 
-  
-})
 
