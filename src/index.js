@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const form = document.getElementById('create-task-form');
-form.addEventListener('submit', addTaskToList);
+form.addEventListener('submit', addToList);
 const uList = document.getElementById('tasks');
 
-function addTaskToList(eventObj) {
+function addToList(eventObj) {
   eventObj.preventDefault();
   const listItem = document.createElement('li');
   const newText = eventObj.target['new-task-description'].value;
