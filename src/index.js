@@ -1,33 +1,31 @@
+const form = document.getElementById('create-task-form');
+const uList = document.getElementById('tasks');
 
-// //your code here
+function addTaskToList(eventObj) {
+  eventObj.preventDefault();
+  const listItem = document.createElement('li');
+  const newText = eventObj.target['new-task-description'].value;
+  listItem.textContent = newText;
+  uList.append(listItem);
 
-// const form = document.getElementById('create-task-form');
-// const uList = document.getElementById('tasks');
+  const btn = document.createElement('button');
+  btn.textContent = "X";
+  listItem.append(btn);
 
-// function addTask(event) {
-//   event.preventDefault();
-//   event.target.reset();
-//   const listItem = document.createElement('li');
-//   const newText = event.target['new-task-description'].value;
-//   listItem.textContent = newText;
-//   uList.append(listItem);
+  btn.addEventListener('click', () => {
+    listItem.remove();
+  })
+}
 
-//   const btn = document.createElement('button');
-//   btn.textContent = "Remove";
-//   listItem.append(btn);
-
-//   btn.addEventListener('click', () => {
-//     listItem.remove();
-//   })
-// }
-
-// form.addEventListener('submit', addTask);
+form.addEventListener('submit', addTaskToList);
 
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
+
+
+document.addEventListener('DOMContentLoaded', () => {
 
   
-// })
+})
 
