@@ -16,7 +16,7 @@ function addTaskToList(eventObj) {
   eventObj.target.reset();
   
   const btn = document.createElement('button');
-  btn.textContent = "X";
+  btn.textContent = "REMOVE";
   listItem.append(btn);
 
   btn.addEventListener('click', () => {
@@ -25,6 +25,7 @@ function addTaskToList(eventObj) {
 //   add new functions here
 
 }
+
 
 
 
