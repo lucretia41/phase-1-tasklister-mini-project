@@ -12,7 +12,8 @@ function addTaskToList(eventObj) {
   const newText = eventObj.target['new-task-description'].value;
   listItem.textContent = newText;
   uList.append(listItem);
-
+  eventObj.target.reset();
+  
   const btn = document.createElement('button');
   btn.textContent = "X";
   listItem.append(btn);
@@ -25,6 +26,7 @@ function addTaskToList(eventObj) {
 }
 
 form.addEventListener('submit', addTaskToList);
+
 
 
 
